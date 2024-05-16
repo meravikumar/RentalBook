@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C0A7F7EF-3A71-4FB2-9F89-D417A8F8E701}|RentalBook\\RentalBook.csproj|d:\\projects\\rentalbookproject (1)\\rentalbookproject\\rentalbook\\rentalbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C0A7F7EF-3A71-4FB2-9F89-D417A8F8E701}|RentalBook\\RentalBook.csproj|solutionrelative:rentalbook\\rentalbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC8975E7-ABFC-4551-8122-D0CDCF0F7374}|RentalBook.DataAccess\\RentalBook.DataAccess.csproj|d:\\projects\\rentalbookproject (1)\\rentalbookproject\\rentalbook.dataaccess\\rentalbook.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EC8975E7-ABFC-4551-8122-D0CDCF0F7374}|RentalBook.DataAccess\\RentalBook.DataAccess.csproj|solutionrelative:rentalbook.dataaccess\\rentalbook.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RentalBook.csproj",
+              "DocumentMoniker": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\RentalBook.csproj",
+              "RelativeDocumentMoniker": "RentalBook\\RentalBook.csproj",
+              "ToolTip": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\RentalBook.csproj",
+              "RelativeToolTip": "RentalBook\\RentalBook.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-14T04:58:45.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RentalBook.DataAccess.csproj",
+              "DocumentMoniker": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook.DataAccess\\RentalBook.DataAccess.csproj",
+              "RelativeDocumentMoniker": "RentalBook.DataAccess\\RentalBook.DataAccess.csproj",
+              "ToolTip": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook.DataAccess\\RentalBook.DataAccess.csproj",
+              "RelativeToolTip": "RentalBook.DataAccess\\RentalBook.DataAccess.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-13T03:08:34.73Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

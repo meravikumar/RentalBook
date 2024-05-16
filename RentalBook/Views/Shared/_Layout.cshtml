@@ -1,0 +1,108 @@
+﻿@using RentalBook.Models.Authentication;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RentalBook</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RentalBook.styles.css" asp-append-version="true" />
+    <link href="~/css/dashboard.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <header class="">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand text-primary fw-bold" asp-area="" asp-controller="Home" asp-action="Index">RentalBook</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                        @if (Context.Session.GetString("Role") != "User")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="Users" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="Users" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            @if (User?.Identity?.IsAuthenticated == true)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="Admin" asp-controller="User" asp-action="Dashboard">Dashboard</a>
+                                </li>
+                            }
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="Users" asp-controller="Home" asp-action="Profile">Profile</a>
+                            </li>
+                        }
+                    </ul>
+
+                    @if (!SignInManager.IsSignedIn(User) && User?.Identity?.IsAuthenticated == false)
+                    {
+                        <div class="me-sm-2">
+                            <a class="btn btn-light" asp-area="Users" asp-controller="Home" asp-action="Register">Register</a>
+                        </div>
+                        <div class="">
+                            <a class="btn btn-primary" asp-area="Users" asp-controller="Home" asp-action="Login" asp-route-returnUrl="@Context.Request.Path">Login</a>
+                        </div>
+                    }
+                    else
+                    {
+
+                        <div class="me-sm-3">
+                            <a class="nav-link text-light" asp-area="Users" asp-controller="Cart" asp-action="Index">
+                                <i class="bi bi-cart"></i><span class='badge badge-warning' id='lblCartCount'> @Context.Session.GetInt32("Quantity") </span>
+                            </a>
+                        </div>
+                        <div class="me-sm-3">Welcome <b class="text-primary">@User?.Identity?.Name</b></div>
+                        <div class="float-right">
+                            <a class="btn btn-warning" asp-area="Users" asp-controller="Home" asp-action="Logout">Logout</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-3">
+            <partial name="_Notification" />
+            <partial name="_PopUp" />
+            <partial name="_ValidationScriptsPartial" />
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted text-center bg-dark">
+        <div class="container">
+            &copy; 2024 - Ecommerce - <a asp-area="Users" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

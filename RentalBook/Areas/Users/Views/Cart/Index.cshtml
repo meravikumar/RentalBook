@@ -1,0 +1,122 @@
+﻿@using RentalBook.Models.ViewModels;
+@model List<CartVM>
+
+<form method="post">
+	<br />
+	
+		@if (Model.Count != 0)
+		{
+		<div style="width:80%; margin-left:150px; margin-top:50px">
+			<div class="card">
+				<div class="card-header bg-dark text-light ml-0">
+					<div class="row">
+						<div class="col-6  pt-2">
+							<i class="fa fa-shopping-cart"></i> &nbsp;
+							Shopping Cart
+						</div>
+						<div class="col-6 text-end">
+							<a asp-area="Users" asp-controller="Home" asp-action="Index" class="btn btn-light btn-sm">Continue Shopping</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-body bg-dark">
+					@foreach (var item in Model)
+					{
+						<div class="row">
+							<div class="d-none d-lg-block col-lg-1 text-center py-2">
+								<img src="@item.ImageUrl" class="rounded" width="100%" />
+							</div>
+							<div class="col-12 col-lg-6 pt-md-3">
+								<h5><strong>@item.Name</strong></h5>
+								<p><small>@Html.Raw(item.Description)</small></p>
+							</div>
+							<div class="col-12  col-lg-5 text-center row">
+								<div class="col-4 text-md-right pt-4">
+									<h6>
+										<strong>
+											₹@item.Price.ToString("0.00")
+											<span class="text-muted">&nbsp;x&nbsp;</span>@item.Quantity
+										</strong>
+									</h6>
+								</div>
+								<div class="col-6 col-sm-4 col-lg-6 pt-2">
+									<div class="w-75 btn-group" role="group">
+										<a asp-action="Plus" asp-route-cartId="@item.Id" class="btn btn-primary">
+											<i class="bi bi-plus-square"></i>
+										</a> &nbsp;
+										<a asp-action="Minus" asp-route-cartId="@item.Id" class="btn btn-warning">
+											<i class="bi bi-dash-square"></i>
+										</a>
+									</div>
+
+								</div>
+								<div class="col-2 col-sm-4 col-lg-2 text-right pt-2">
+									<a asp-action="Remove" asp-route-cartId="@item.Id" class="btn btn-danger">
+										<i class="bi bi-trash-fill"></i>
+									</a>
+								</div>
+
+								<div class="col-6 text-md-right pt-4">
+									<h6>
+
+										<strong>
+											<span>Rent per Month </span>(₹@(item.Price * item.Quantity)
+											<span class="text-muted">&nbsp;x&nbsp;</span>@item.RentDuration)
+											
+										</strong>
+									</h6>
+								</div>
+								<div class="col-6 col-sm-4 col-lg-6 pt-2">
+									<div class="w-75 btn-group" role="group">
+										<a asp-action="RentPeriodPlus" asp-route-cartId="@item.Id" class="btn btn-primary">
+											<i class="bi bi-plus-square"></i>
+										</a> &nbsp;
+										<a asp-action="RentPeriodMinus" asp-route-cartId="@item.Id" class="btn btn-warning">
+											<i class="bi bi-dash-square"></i>
+										</a>
+									</div>
+
+								</div>
+							</div>
+							
+						</div>
+						<hr />
+					}
+					<div class="row me-sm-1">
+						<div class="col-sm-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8">
+							<ul class="list-group">
+								<li class="list-group-item d-flex justify-content-between bg-light">
+									<span class="text-info"><b>Total Amount</b></span>
+									<strong class="text-info">₹@ViewBag.OrderTotal</strong>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-footer bg-dark">
+					<div class="card-footer row border-0">
+						<div class="col-sm-12 col-lg-4 col-md-6 offset-lg-8 offset-md-6 ">
+							<a asp-action="Summary" class="btn btn-success form-control">Summary</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		}
+		else
+		{
+		<div class="row justify-content-center">
+			<div class="col-2">
+				<div class="bg-dark rounded-2 p-3 mt-5 row text-center">
+					<h5>Your Cart is Empty!</h5>
+					<hr />
+					<div class="form-group mb-1">
+						<a asp-area="Users" asp-controller="Home" asp-action="Index" class="btn btn-light btn-sm">Continue Shopping</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		}
+</form>

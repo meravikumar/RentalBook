@@ -1,0 +1,30 @@
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\bin\Debug\net6.0\RentalBook.Models.deps.json
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\bin\Debug\net6.0\RentalBook.Models.runtimeconfig.json
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\bin\Debug\net6.0\RentalBook.Models.dll
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\bin\Debug\net6.0\RentalBook.Models.pdb
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.csproj.AssemblyReference.cache
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.AssemblyInfoInputs.cache
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.AssemblyInfo.cs
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.csproj.CoreCompileInputs.cache
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.sourcelink.json
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.dll
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\refint\RentalBook.Models.dll
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.pdb
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.genruntimeconfig.cache
+C:\Users\RaviKumar\OneDrive - Injala\Desktop\College\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\ref\RentalBook.Models.dll
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\bin\Debug\net6.0\RentalBook.Models.deps.json
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\bin\Debug\net6.0\RentalBook.Models.runtimeconfig.json
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\bin\Debug\net6.0\RentalBook.Models.dll
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\bin\Debug\net6.0\RentalBook.Models.pdb
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.csproj.AssemblyReference.cache
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.AssemblyInfoInputs.cache
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.AssemblyInfo.cs
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.csproj.CoreCompileInputs.cache
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.sourcelink.json
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.dll
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\refint\RentalBook.Models.dll
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.pdb
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\RentalBook.Models.genruntimeconfig.cache
+D:\Projects\RentalBookProject (1)\RentalBookProject\RentalBook.Models\obj\Debug\net6.0\ref\RentalBook.Models.dll

@@ -1,0 +1,45 @@
+﻿@model List<RentalBook.Models.Models.Product>
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+
+
+
+<div class="row pb-3" style="width:90%; margin-left:80px; margin-right:80px; margin-top: 70px">
+	<div class="text-center text-primary">
+		<h1>Welcome to RentalBook</h1>
+	</div>
+	<hr />
+	@foreach (var product in Model)
+	{
+		<div class="col-lg-3 col-md-6">
+			<div class="row p-2">
+				<div class="col-12 p-1" style="border-radius: 5px;">
+					<div  style="border:none;">
+						<a asp-action="Details" asp-route-productId="@product.Id" style="text-decoration:none">
+							<img style="height:340px; width:250px" src="@product.ImageUrl" class="card-img-top rounded" />
+							<div class="mt-2 text-truncate text-primary h5" style="max-width: 248px;">
+								@product.Title
+							</div>
+							@if (product.DiscountAmt != null)
+							{
+								<div class="d-flex flex-row align-items-center">
+									<span class="text-warning fw-bold me-lg-2">₹@product.DiscountAmt</span>
+									<div class="ml-2"> <strike class="me-lg-1"><small>₹@product.Price.ToString("0.00")</small></strike></div>
+								</div>
+							}
+							else
+							{
+								<div class="d-flex flex-row align-items-center">
+									<span class="text-warning fw-bold me-lg-2">₹@product.Price.ToString("0.00")</span>
+								</div>
+							}
+
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</div>

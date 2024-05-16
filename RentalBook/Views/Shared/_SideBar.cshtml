@@ -1,0 +1,142 @@
+﻿<link href="~/css/dashboard.css" rel="stylesheet" />
+
+<div class="side-navbar active-nav flex-wrap flex-column bg-dark" id="sidebar">
+    <div class="px-3">
+        <div class="d-flex justify-content-center">
+            <img src=""
+                 alt="..." width="50" height="50" class="mr-3 rounded-circle img-thumbnail shadow-sm" />
+
+        </div>
+        <div class="mt-1 text-center">
+            <h5 class="text-light fw-bold">@User.Identity.Name</h5>
+        </div>
+    </div>
+    <hr />
+    <p class="text-light fw-bold text-uppercase px-3  small pb-2 mb-0">The Dashboard</p>
+
+    <ul class="nav flex-column text-dark ms-lg-2">
+        @if (Context.Session.GetString("Role") == "SuperAdmin")
+        {
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="User" asp-action="Admin" class="nav-link text-secondary">
+                    <i class="bi bi-person-lines-fill"></i> &nbsp; Admin List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="User" asp-action="Dealer" class="nav-link text-secondary">
+                    <i class="bi bi-person-lines-fill"></i> &nbsp; Dealer List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="User" asp-action="Librarian" class="nav-link text-secondary">
+                    <i class="bi bi-person-lines-fill"></i> &nbsp; Librarian List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="User" asp-action="Student" class="nav-link text-secondary">
+                    <i class="bi bi-person-lines-fill"></i> &nbsp; Student List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="Product" asp-action="Index" class="nav-link text-secondary">
+                    <i class="bi bi-list-ul"></i> &nbsp; Product List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="Category" asp-action="Index" class="nav-link text-secondary">
+                    <i class="bi bi-list-ul"></i> &nbsp; All Category
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="Order" asp-action="Index" class="nav-link text-secondary">
+                    <i class="bi bi-bag-check-fill"></i> &nbsp; Manage Order
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="User" asp-action="GetRole" class="nav-link text-secondary">
+                    <i class="bi bi-person-lines-fill"></i> &nbsp; RoleList
+                </a>
+            </li>
+            @*<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+               aria-haspopup="true" aria-expanded="false"> &nbsp; RoleList</a>
+                <div class="dropdown-menu">
+                    <a asp-controller="User" asp-action="GetRole" class="dropdown-item text-secondary">
+                        <i class="bi bi-person-lines-fill"></i> &nbsp; Get Roles
+                    </a>
+                    <a asp-controller="User" asp-action="AddRole" class="dropdown-item text-secondary">
+                        <i class="bi bi-plus-circle"></i> &nbsp; Add Role
+                    </a>
+                </div>
+            </li>*@
+
+        }
+        @if (Context.Session.GetString("Role") == "Admin")
+        {
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="User" asp-action="Dealer" class="nav-link text-secondary">
+                    <i class="bi bi-person-lines-fill"></i> &nbsp; Dealer List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="User" asp-action="Librarian" class="nav-link text-secondary">
+                    <i class="bi bi-person-lines-fill"></i> &nbsp; Librarian List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="User" asp-action="Student" class="nav-link text-secondary">
+                    <i class="bi bi-person-lines-fill"></i> &nbsp; Student List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="Product" asp-action="Index" class="nav-link text-secondary" style="">
+                    <i class="bi bi-bag-check-fill"></i> &nbsp; Product List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="Order" asp-action="Index" class="nav-link text-secondary">
+                    <i class="bi bi-bag-check-fill"></i> &nbsp; Manage Order
+                </a>
+            </li>
+        }
+        @if (Context.Session.GetString("Role") == "Librarian" || Context.Session.GetString("Role") == "Student" || Context.Session.GetString("Role") == "Dealer")
+        {
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="Product" asp-action="Index" class="nav-link text-secondary">
+                    <i class="bi bi-bag-check-fill"></i> &nbsp; Product List
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="Order" asp-action="Index" class="nav-link text-secondary">
+                    <i class="bi bi-bag-check-fill"></i> &nbsp; Manage Order
+                </a>
+            </li>
+        }
+        @if (Context.Session.GetString("Role") == "User")
+        {
+            <li class="nav-item">
+                <a asp-area="Admin" asp-controller="Order" asp-action="Index" class="nav-link text-secondary">
+                    <i class="bi bi-bag-check-fill"></i> &nbsp; Manage Order
+                </a>
+            </li>
+        }
+
+    </ul>
+</div>
+
+
+@*<div class="p-0 my-container active-cont">
+    <a class="btn bg-dark border-0 " id="menu-btn">
+        <i class="bi bi-menu-button-fill text-light"></i><small class="text-uppercase text-secondary fw-bold"> Menu</small>
+    </a>
+</div>
+
+<script>
+    var menu_btn = document.querySelector("#menu-btn");
+    var sidebar = document.querySelector("#sidebar");
+    var container = document.querySelector(".my-container");
+    menu_btn.addEventListener("click", () => {
+        sidebar.classList.toggle("active-nav");
+        container.classList.toggle("active-cont");
+    });
+</script>*@

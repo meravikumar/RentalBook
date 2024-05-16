@@ -1,0 +1,92 @@
+﻿@model RentalBook.Models.Models.ShoppingCart
+
+<form method="post">
+    <input hidden asp-for="ProductId" />
+    <div class="mt-5 mb-5" >
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <div class="card border-0" style="width:80%; margin-top:40px; margin-left: 100px">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="p-4">
+                                <div class="text-center p-4"> <img class="rounded-2" id="main-image" src="@Model.Product.ImageUrl" width="250" /> </div>
+                                @*<div class="thumbnail text-center"> <img onclick="change_image(this)" src="@Model.Product.ImageUrl" width="70"> <img onclick="change_image(this)" src="@Model.Product.ImageUrl" width="70"> </div>*@
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-3 bg-white h-100">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <a class="btn btn-light" asp-action="Index"><i class="bi bi-arrow-left-circle-fill"></i> Back to Home</a>
+                                    </div>
+                                </div>
+                                <div class="mt-4 mb-3">
+                                    <h5 class="text-uppercase text-primary fw-bold me-sm-2">@Model.Product.Title</h5>
+                                    <span class="text-uppercase text-muted" style="font-size:13px"><i class="bi bi-pen-fill"></i> @Model.Product.Author &nbsp; &nbsp;</span>
+                                    <span class="text-uppercase text-muted" style="font-size:13px"><i class="bi bi-book-half"></i> @Model.Product.Publication &nbsp; &nbsp;</span>
+                                    <span class="text-uppercase text-muted" style="font-size:13px">ISBN - @Model.Product.ISBN</span>
+                                    @if(Model.Product.DiscountAmt == null)
+                                    {
+                                        <div class="d-flex flex-row align-items-center">
+                                            <input hidden asp-for="Price" value="@Model.Product.Price" />
+                                            <span class="text-warning fw-bold me-lg-2"> ₹@Model.Product.Price</span>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        if (Model.Discount.DiscountType == "fixed")
+                                        {
+                                            <div class="d-flex flex-row align-items-center">
+                                                <input hidden asp-for="Price" value="@Model.Product.DiscountAmt" />
+                                                <span class="text-warning fw-bold me-lg-2">₹@Model.Product.DiscountAmt</span>
+                                                <div class="ml-2"> <strike class="me-lg-1"><small>₹@Model.Product.Price</small></strike> <span>₹@Model.Discount.Discount OFF</span> </div>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="d-flex flex-row align-items-center">
+                                                <input hidden asp-for="Price" value="@Model.Product.DiscountAmt" />
+                                                <span class="text-warning fw-bold me-lg-2">₹@Model.Product.DiscountAmt</span>
+                                                <div class="ml-2"> <strike class="me-lg-1"><small>₹@Model.Product.Price</small></strike> <span>@Model.Discount.Discount% OFF</span> </div>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                                <p class="text-warning">@Model.Product.Description</p>
+                                <div class="mt-5 text-warning">
+                                    <p class="text-warning"><b>Item Left: @Model.Product.Quantity</b></p>
+                                    <label asp-for="Quantity"></label>
+                                    <select asp-for="Quantity" class="form-select">
+                                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                                    </select>
+                                </div>
+                                <div class="mt-4 d-flex justify-content-center"> 
+                                    <button type="submit" class="btn btn-primary text-uppercase me-sm-3">Add to cart &nbsp; <i class="bi bi-cart-plus"></i></button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</form>
+<script>
+    $(function () {
+        var $select = $(".form-select");
+        for (i = 1; i <= @Model.Product.Quantity; i++) {
+            $select.append($('<option>--Qty--</option>').val(i).html(i))
+        }
+    });
+
+            //$(function change_image(image){
+            //    var container = document.getElementById("main-image");
+            //    container.src = image.src;
+            //});
+            //document.addEventListener("DOMContentLoaded", function (event) {
+            //});
+</script>

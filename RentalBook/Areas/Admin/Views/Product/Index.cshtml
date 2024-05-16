@@ -1,0 +1,197 @@
+﻿@using RentalBook.Models.ViewModels;
+@model List<RentalBook.Models.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if(ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+@{
+    Html.RenderPartial("_SideBar");
+}
+<div class="new-container">
+    <div class="p-3">
+        <div class="row pt-3">
+            <div class="col-4">
+                <h2 class="text-secondary"><b>Product List</b></h2>
+            </div>
+            <div class="col-4">
+                <form method="get" asp-controller="Product" asp-action="Index" class="d-flex">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search By Product or Dealer Name..." name="SearchString" value="@ViewBag.SearchStr">
+                    <button class="btn btn-secondary my-2 my-sm-0 me-sm-2" type="submit">Search</button>
+                </form>
+            </div>
+            @if (Context.Session.GetString("Role") == "Dealer" || Context.Session.GetString("Role") == "Librarian" || Context.Session.GetString("Role") == "Student")
+            {
+                <div class="col-4 text-end">
+                    <a asp-controller="Product" asp-action="Upsert" class=" me-sm-2 btn btn-primary">
+                        <i class="bi bi-folder-plus"></i> &nbsp; Add New Product
+                    </a>
+                    <a asp-controller="User" asp-action="Dashboard" class=" btn btn-light">
+                        Go to Dashboard
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="col-4 text-end">
+                    <a asp-controller="User" asp-action="Dashboard" class=" btn btn-light">
+                        Back to Dashboard
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+    <br />
+    <table id="myTable" class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th><a asp-action="Index" asp-route-sortOrder="@ViewData["NameOrder"]" class="text-decoration-none">Name</a></th>
+                <th>Dealer</th>
+                <th>Description</th>
+                <th><a asp-action="Index" asp-route-sortOrder="@ViewData["PriceOrder"]" class="text-decoration-none">PricePerQty</a></th>
+                <th>DiscountAmount</th>
+                <th>Quantity</th>
+                <th>IsActive</th>
+                @if (Context.Session.GetString("Role") == "Dealer")
+                {
+                    <th></th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>@obj.Title</td>
+                    <td>@obj.Renter</td>
+                    <td>@obj.Description</td>
+                    <td>@obj.Price</td>
+                    @if (obj.DiscountAmt == null)
+                    {
+                        <td class="text-warning fw-bold">No Discount</td>
+                    }
+                    else
+                    {
+                        <td class="text-success fw-bold">@obj.DiscountAmt.Value.ToString("0.000")</td>
+                    }
+                    <td>@obj.Quantity</td>
+                    @if (Context.Session.GetString("Role") == "SuperAdmin" || Context.Session.GetString("Role") == "Admin" ||
+                   Context.Session.GetString("Role") == "Dealer" || Context.Session.GetString("Student") == "Student" ||
+                   Context.Session.GetString("Librarian") == "Librarian")
+                    {
+                        <td style="text-align: center">
+                            @if (obj.IsActive == true)
+                            {
+                                <a asp-area="Admin" asp-controller="Product" asp-action="IsActive" asp-route-id="@obj.Id"
+                       class="btn btn-success mx-2">Active</a>
+                            }
+                            else
+                            {
+                                <a asp-area="Admin" asp-controller="Product" asp-action="IsActive" asp-route-id="@obj.Id"
+                       class="btn btn-warning mx-2">InActive</a>
+                            }
+
+                        </td>
+                    }
+                    @if (Context.Session.GetString("Role") == "Dealer" ||
+                   Context.Session.GetString("Student") == "Student" ||
+                   Context.Session.GetString("Librarian") == "Librarian")
+                    {
+                        <td style="text-align: center">
+                            <div class="w-60 btn-group" role="group">
+                                <a asp-area="Admin" asp-controller="Product" asp-action="Upsert" asp-route-id="@obj.Id"
+                           class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i> Edit</a>
+                                <a onclick="Delete('/Admin/Product/Delete/@obj.Id')"
+                           class="btn btn-warning mx-2"><i class="bi bi-trash"></i> Delete</a>
+                                @* <a asp-area="Admin" asp-controller="Product" asp-action="Delete" asp-route-id="@obj.Id"
+                        class="btn btn-danger mx-2"><i class="bi bi-trash"></i> Delete</a>*@
+                                <a asp-area="Admin" asp-controller="Product" asp-action="Discount" asp-route-id="@obj.Id"
+                           class="btn btn-success mx-2"><i class="bi bi-patch-plus"></i> Add Discount</a>
+                            </div>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@*Pagination*@
+<div class="container">
+    @if(pager.TotalPages > 0)
+    {
+        <ul class="pagination justify-content-center">
+            @if(pager.CurrentPage > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = 1, SearchString = ViewBag.SearchStr})">First</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = pager.CurrentPage - 1, SearchString = ViewBag.SearchStr})">Previous</a>
+                </li>
+            }
+            @for(var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+            {
+                <li class="page-item @(pge == pager.CurrentPage ? "active": "")">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = pge, SearchString = ViewBag.SearchStr})">@pge</a>
+                </li>
+            }
+            @if(pager.CurrentPage < pager.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = pager.CurrentPage + 1, SearchString = ViewBag.SearchStr})">Next</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = pager.TotalPages, SearchString = ViewBag.SearchStr})">Last</a>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    <script>
+        function Delete(url) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!',
+                type: "success"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: url,
+                        type: 'DELETE',
+                        success: function (data) {
+                            if (data.success) {
+                                // Product deleted successfully, show success message
+                                Swal.fire("Deleted!", "Product Deleted Successfully!", "success");
+                                setTimeout(function () {
+                                    window.location.href = '/Admin/Product/Index';
+                                }, 1500);
+                            } else {
+                                // Product deletion failed, show error message
+                                Swal.fire("Error!", "@TempData["error"]", "error");
+                            }
+                        }
+                    })
+                }
+            })
+        }
+    </script>
+}
+
+

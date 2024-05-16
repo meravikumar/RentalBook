@@ -1,0 +1,106 @@
+﻿@using RentalBook.Models.ViewModels;
+@model List<OrderVM>
+@{
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+    Html.RenderPartial("_SideBar");
+}
+
+@if(Model.Count > 0)
+{
+    <div class="new-container">
+        <div class="d-flex justify-content-between pt-4">
+            <div class="p-2">
+                <h2 class="text-primary">Order List</h2>
+            </div>
+        </div>
+        <br /><br />
+
+        <table id="tblData" class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Order Status</th>
+                    <th>Payment Status</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td>@obj.Id</td>
+                        <td>@obj.Name</td>
+                        <td>@obj.PhoneNumber</td>
+                        <td>@obj.Email</td>
+                        <td>@obj.Status</td>
+                        <td>@obj.PaymentStatus</td>
+                        <td>@obj.OrderTotal</td>
+                        <td style="text-align: center">
+                            <div class="w-75 btn-group" role="group">
+                                <a asp-area="Admin" asp-controller="Order" asp-action="Detail" asp-route-orderId="@obj.Id"
+                           class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i> Edit</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="row justify-content-center">
+        <div class="col-4" style="margin-top:100px">
+            <div class="bg-dark rounded-2 p-3 mt-5 row text-center">
+                <h5>Your have not Ordered anything yet!</h5>
+                <hr />
+                <div class="form-group mb-1">
+                    <a asp-area="Users" asp-controller="Home" asp-action="Index" class="btn btn-light btn-sm">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@*Pagination*@
+<div class="container">
+    @if (pager.TotalPages > 0)
+    {
+        <ul class="pagination justify-content-center">
+            @if (pager.CurrentPage > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = 1, SearchString = ViewBag.SearchStr})">First</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = pager.CurrentPage - 1, SearchString = ViewBag.SearchStr})">Previous</a>
+                </li>
+            }
+            @for (var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+            {
+                <li class="page-item @(pge == pager.CurrentPage ? "active": "")">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = pge, SearchString = ViewBag.SearchStr})">@pge</a>
+                </li>
+            }
+            @if (pager.CurrentPage < pager.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = pager.CurrentPage + 1, SearchString = ViewBag.SearchStr})">Next</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new {pg = pager.TotalPages, SearchString = ViewBag.SearchStr})">Last</a>
+                </li>
+            }
+        </ul>
+    }
+</div>

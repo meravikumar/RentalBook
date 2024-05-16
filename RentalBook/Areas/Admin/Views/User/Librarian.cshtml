@@ -1,0 +1,131 @@
+﻿@using RentalBook.Models.ViewModels;
+@model List<UserVM>
+@{
+    ViewData["Title"] = "Librarian";
+
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+@{
+    Html.RenderPartial("_SideBar");
+}
+
+<div class="new-container">
+    <div class="p-3">
+        <div class="row pt-3">
+            <div class="col-4">
+                <h2><b>Librarian List</b></h2>
+            </div>
+            <div class="col-4">
+                <form method="get" asp-controller="User" asp-action="Librarian" class="d-flex">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search By Librarian Name..." name="SearchString" value="@ViewBag.SearchStr">
+                    <button class="btn btn-secondary my-2 my-sm-0 me-sm-2" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-4 text-end">
+                <a asp-controller="User" asp-action="Dashboard" class=" btn btn-light">
+                    Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <table class="table table-bordered table-re table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>ContactNo</th>
+                <th>City</th>
+                <th>State</th>
+                <th>StatusType</th>
+                <th>IsActive</th>
+                <th>Role</th>
+                <th>Reason</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                @if (obj.Role == "Librarian")
+                {
+                    <tr>
+                        <td>@obj.Username</td>
+                        <td>@obj.Email</td>
+                        <td>@obj.PhoneNumber</td>
+                        <td>@obj.City</td>
+                        <td>@obj.State</td>
+                        <td>@obj.StatusTypes</td>
+                        <td>@obj.IsActive</td>
+                        <td>@obj.Role</td>
+                        <td>@obj.Reason</td>
+                        <td>
+                            @if (obj.StatusTypes == StatusType.Pending.ToString())
+                            {
+                                <div class="btn-group" role="group">
+                                    <a asp-area="Admin" asp-controller="User" asp-action="Approve" asp-route-data="@obj.Username"
+                           class="btn btn-primary"><i class="bi bi-person-fill-check"></i> Approve</a>
+                                    <button id="btnAddReason" value="@obj.Username" class="btn btn-warning"><i class="bi bi-person-fill-x"></i> Reject</button>
+                                </div>
+                            }
+                            @if (obj.StatusTypes == StatusType.Approve.ToString())
+                            {
+                                <div class="w-75 btn-group" role="group">
+                                    <a asp-area="Admin" asp-controller="User" asp-action="Block" asp-route-data="@obj.Username"
+                           class="btn btn-warning"><i class="bi bi-person-fill-lock"></i> Block</a>
+                                </div>
+                            }
+                            @if (obj.StatusTypes == StatusType.Block.ToString())
+                            {
+                                <div class="w-75 btn-group" role="group">
+                                    <a asp-area="Admin" asp-controller="User" asp-action="UnBlock" asp-route-data="@obj.Username"
+                           class="btn btn-outline-light"><i class="bi bi-person-fill-slash"></i> UnBlock</a>
+                                </div>
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@*Pagination*@
+<div class="container">
+    @if (pager.TotalPages > 0)
+    {
+        <ul class="pagination justify-content-center">
+            @if (pager.CurrentPage > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Librarian", new {pg = 1, SearchString = ViewBag.SearchStr})">First</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Librarian", new {pg = pager.CurrentPage - 1, SearchString = ViewBag.SearchStr})">Previous</a>
+                </li>
+            }
+            @for (var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+            {
+                <li class="page-item @(pge == pager.CurrentPage ? "active": "")">
+                    <a class="page-link" href="@Url.Action("Librarian", new {pg = pge, SearchString = ViewBag.SearchStr})">@pge</a>
+                </li>
+            }
+            @if (pager.CurrentPage < pager.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Librarian", new {pg = pager.CurrentPage + 1, SearchString = ViewBag.SearchStr})">Next</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Librarian", new {pg = pager.TotalPages, SearchString = ViewBag.SearchStr})">Last</a>
+                </li>
+            }
+        </ul>
+    }
+</div>
+

@@ -1,0 +1,24 @@
+﻿@model int
+<div class="container row ">
+    <div class="col-12 text-center">
+        
+        
+        
+    </div>
+    
+</div>
+<div class="row justify-content-center" style="margin-top:70px">
+	<div class="col-6">
+        <div class="bg-dark rounded-2 p-3 mt-5 row text-center justify-content-center">
+            <h1 class="text-primary text-center"> Order Placed Successfully!</h1>
+            Your Order Number is: @Model <br /><br />
+			<hr />
+            <div>
+                Your order has been placed successfully! <br />
+            </div>
+			<div class="form-group mb-1 mt-3">
+                <a asp-area="Users" asp-controller="Home" asp-action="Index" class="btn btn-light btn-sm fw-bold">Continue Shopping</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,97 @@
+﻿@using RentalBook.Models.ViewModels;
+@model UserVM
+
+
+
+<form asp-action="Register" method="post">
+    <div class="row justify-content-center" style="width:60%; margin-left:260px;margin-top:60px">
+        <div class="col-12">
+            <div class="bg-dark rounded-2 p-3 mt-4 row">
+                <h2>Register</h2>
+                <hr />
+                @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="Username"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" type="password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="ConfirmPassword"></label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="PhoneNumber"></label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="Area"></label>
+                    <input asp-for="Area" class="form-control" />
+                    <span asp-validation-for="Area" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="City"></label>
+                    <input asp-for="City" class="form-control" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="State"></label>
+                    <input asp-for="State" class="form-control" />
+                    <span asp-validation-for="State" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="PinCode"></label>
+                    <input asp-for="PinCode" class="form-control" />
+                    <span asp-validation-for="PinCode" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Role"></label>
+                    <select asp-for="Role" asp-items="ViewBag.Roles" class="form-select">
+                        @*<select asp-for="Role" asp-items="@Model.CategoryList" class="form-select">*@
+                        <option disabled selected>--Select Category--</option>
+                    </select>
+                    <span asp-validation-for="Role" class="text-danger"></span>
+                </div>
+                <div class="form-group col-6">
+                    <button type="submit" class="me-sm-1 btn btn-primary">Register</button>
+                    <a asp-action="Login" class="btn btn-secondary">Already Have Account.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+        <script>
+            const togglePassword = document.querySelector("#togglePassword");
+            const password = document.querySelector("#password");
+
+            togglePassword.addEventListener("click", function () {
+                // toggle the type attribute
+                const type = password.getAttribute("type") === "password" ? "text" : "password";
+                password.setAttribute("type", type);
+
+                // toggle the icon
+                this.classList.toggle("bi-eye");
+            });
+
+            // prevent form submit
+            const form = document.querySelector("form");
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+            });
+        </script>
+}

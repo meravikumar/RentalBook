@@ -1,0 +1,337 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\RentalBook.bundle.scp.css",
+      "PackagePath": "staticwebassets\\RentalBook.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\018c2511-725f-43e2-bf1e-6e1c34e744ef.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\018c2511-725f-43e2-bf1e-6e1c34e744ef.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\080942b1-a0fb-4726-8459-1d1e17db237e.jpeg",
+      "PackagePath": "staticwebassets\\Images\\products\\080942b1-a0fb-4726-8459-1d1e17db237e.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\0d0d7ee7-a694-48c7-834f-a745a0fb696b.jpeg",
+      "PackagePath": "staticwebassets\\Images\\products\\0d0d7ee7-a694-48c7-834f-a745a0fb696b.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\3ed92e59-836b-4801-ab42-b3b79d076618.png",
+      "PackagePath": "staticwebassets\\Images\\products\\3ed92e59-836b-4801-ab42-b3b79d076618.png"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\461f61cc-940c-480d-bd51-397cae70bceb.jpeg",
+      "PackagePath": "staticwebassets\\Images\\products\\461f61cc-940c-480d-bd51-397cae70bceb.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\5cc40135-de28-4741-9c5b-40a9e2c34e8e.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\5cc40135-de28-4741-9c5b-40a9e2c34e8e.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\64112eed-4051-4b6e-ab24-e8de91be9a8b.jpeg",
+      "PackagePath": "staticwebassets\\Images\\products\\64112eed-4051-4b6e-ab24-e8de91be9a8b.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\641547ea-384f-41ae-8ae9-6f9148cd4afe.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\641547ea-384f-41ae-8ae9-6f9148cd4afe.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\7a3c8b05-a3ba-4860-8ba0-1e00405996c4.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\7a3c8b05-a3ba-4860-8ba0-1e00405996c4.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\812dde51-36ff-497b-a453-194cf945227a.png",
+      "PackagePath": "staticwebassets\\Images\\products\\812dde51-36ff-497b-a453-194cf945227a.png"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\84f2619e-1657-4803-8a8e-b8d55a2df924.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\84f2619e-1657-4803-8a8e-b8d55a2df924.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\a0d4f2c1-838c-43cf-a7a2-f2f294e2e38b.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\a0d4f2c1-838c-43cf-a7a2-f2f294e2e38b.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\d44cadc4-88ed-40e7-8039-952026061b7f.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\d44cadc4-88ed-40e7-8039-952026061b7f.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\daa0afba-fe11-41d6-a7ca-9483ca89eae1.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\daa0afba-fe11-41d6-a7ca-9483ca89eae1.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\e4e51fda-e75a-411c-a798-9a9890920550.jpeg",
+      "PackagePath": "staticwebassets\\Images\\products\\e4e51fda-e75a-411c-a798-9a9890920550.jpeg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\e7f63db6-dc99-4f99-abd2-e18553c10179.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\e7f63db6-dc99-4f99-abd2-e18553c10179.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\Images\\products\\ffa5c2e6-6db0-46b6-a0e9-e45454585bbe.jpg",
+      "PackagePath": "staticwebassets\\Images\\products\\ffa5c2e6-6db0-46b6-a0e9-e45454585bbe.jpg"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Projects\\RentalBookProject (1)\\RentalBookProject\\RentalBook\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.RentalBook.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.RentalBook.props",
+      "PackagePath": "build\\RentalBook.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.RentalBook.props",
+      "PackagePath": "buildMultiTargeting\\RentalBook.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.RentalBook.props",
+      "PackagePath": "buildTransitive\\RentalBook.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

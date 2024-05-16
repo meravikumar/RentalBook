@@ -1,0 +1,90 @@
+﻿@using RentalBook.Models.ViewModels;
+@model DiscountVM
+
+@{
+    Html.RenderPartial("_SideBar");
+}
+<form asp-action="Discount" method="post">
+    <div class="new-container row justify-content-center">
+        <div class="col-12">
+            <div class="p-3 mt-4 row">
+                <h2>Discount</h2>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="ProductId"></label>
+                    <input asp-for="ProductId" value="@ViewBag.ProductId" class="form-control" readonly />
+                    <span asp-validation-for="ProductId" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="Price"></label>
+                    <input asp-for="Price" value="@ViewBag.Price" class="form-control" readonly />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="DiscountType"></label>
+                    <select asp-for="DiscountType" class="form-select" id="optSelect">
+                        <option selected disabled>--Select Type--</option>
+                        <option value="fixed">Fixed Amount</option>
+                        <option value="percent">Percentage</option>
+                    </select>
+                    <span asp-validation-for="DiscountType" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="Discount" for="selectedField" id="selectedLabel">Discount</label>
+                    <input asp-for="Discount" class="form-control" id="selectedField" />
+                    <span asp-validation-for="Discount" class="text-danger"></span>
+                    <p id="errorMessage" class="text-danger"></p>
+                    
+                </div>
+                <div class="form-group mb-2 col-6">
+                    <label asp-for="ValidFrom"></label>
+                    <input asp-for="ValidFrom" id="validFrom" name="validFrom" class="form-control" />
+                    <span asp-validation-for="ValidFrom" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3 col-6">
+                    <label asp-for="ValidTo"></label>
+                    <input asp-for="ValidTo" id="validTo" name="validTo" class="form-control" />
+                    <span asp-validation-for="ValidTo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary me-sm-2">Add Discount</button>
+                    <a asp-area="Admin" asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    <script>
+        //Date Range Validation
+        $(document).ready(function () {
+            var now = new Date().toISOString().slice(0, -8); //* Converts a date object into string using ISO standard, Slice - extracts a part of a string and returns the extracted part:
+            $("#validFrom").attr("min", now);
+
+            $("#validFrom").on("change", function () {
+                var validFromValue = $(this).val();
+                $("#validTo").attr("min", validFromValue);
+            });
+        });
+
+        //Option Select Discount Type
+        $("#optSelect").on("change", function () {
+            var selectedOption = $(this).val();
+            var selectedLabel = $("#selectedLabel");
+            var selectedField = $("selectedField");
+
+            if (selectedOption == "fixed") {
+                selectedLabel.text("Fixed Discount");
+            }
+            else if (selectedOption == "percent") {
+                selectedLabel.text("Discount Percentage");
+            }
+        });
+    </script>
+
+}
